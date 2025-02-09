@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loborems.controllers.DashboardController">
+    <ScrollPane fitToWidth="true" style="-fx-background: transparent; -fx-background-color: transparent;">
+        <AnchorPane prefHeight="730.0" prefWidth="3898.0" style="-fx-background-color: linear-gradient(to bottom right, #ede8f5, #adbbda, #8697c4);">
+            <HBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+
+                <!-- Left Side Panel -->
+                <VBox style="-fx-background-color: linear-gradient(to bottom, #3d52a0, #7091e6); -fx-background-radius: 15; -fx-padding: 30;" styleClass="sidebar">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+
+                    <!-- Logo -->
+
+
+                    <!-- Profile Section -->
+                    <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 20 0 30 0;">
+                        <ImageView fitHeight="44.0" fitWidth="44.0">
+                            <image>
+                                <Image url="@../../../../images/logo-jihad.png" />
+                            </image>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </ImageView>
+                        <VBox>
+                            <Text fill="#f9fafb" strokeType="OUTSIDE" strokeWidth="0.0" text="جِهاد اشتيه">
+                                <font>
+                                    <Font name="System Bold" size="15.0" />
+                                </font>
+                            </Text>
+                            <Text fill="#f9fafbab" strokeType="OUTSIDE" strokeWidth="0.0" text="RealEstate Admin">
+                                <font>
+                                    <Font size="15.0" />
+                                </font>
+                            </Text>
+                        </VBox>
+                    </HBox>
+
+                    <!-- Navigation Buttons -->
+                    <VBox spacing="10" VBox.vgrow="ALWAYS">
+                        <JFXButton maxWidth="Infinity" onAction="#goToDashboard" style="-fx-background-color: #7091e6; -fx-text-fill: white; -fx-background-radius: 5;" styleClass="nav-button">
+                            <graphic>
+                                <HBox alignment="CENTER_LEFT" spacing="10">
+                                    <ImageView fitHeight="25.0" fitWidth="25.0">
+                                        <Image url="@../../../../images/home.png" />
+                                    </ImageView>
+                                    <Text fill="WHITE" text="Dashboard" />
+                                </HBox>
+                            </graphic>
+                        </JFXButton>
+
+                        <!-- Similar structure for other navigation buttons -->
+                        <!-- Clients Button -->
+                        <JFXButton maxWidth="Infinity" onAction="#goToClients" style="-fx-background-color: #7091e6; -fx-text-fill: white; -fx-background-radius: 5;" styleClass="nav-button">
+                            <graphic>
+                                <HBox alignment="CENTER_LEFT" spacing="10">
+                                    <ImageView fitHeight="25.0" fitWidth="25.0">
+                                        <Image url="@../../../../images/client.png" />
+                                    </ImageView>
+                                    <Text fill="WHITE" text="Clients" />
+                                </HBox>
+                            </graphic>
+                        </JFXButton>
+
+                        <!-- Properties Button -->
+                        <JFXButton maxWidth="Infinity" onAction="#goToProperties" style="-fx-background-color: #7091e6; -fx-text-fill: white; -fx-background-radius: 5;" styleClass="nav-button">
+                            <graphic>
+                                <HBox alignment="CENTER_LEFT" spacing="10">
+                                    <ImageView fitHeight="25.0" fitWidth="25.0">
+                                        <Image url="@../../../../images/propr.png" />
+                                    </ImageView>
+                                    <Text fill="WHITE" text="Properties" />
+                                </HBox>
+                            </graphic>
+                        </JFXButton>
+
+                        <!-- Interactions Button -->
+                        <JFXButton maxWidth="Infinity" onAction="#goToInteractions" style="-fx-background-color: #7091e6; -fx-text-fill: white; -fx-background-radius: 5;" styleClass="nav-button">
+                            <graphic>
+                                <HBox alignment="CENTER_LEFT" spacing="10">
+                                    <ImageView fitHeight="25.0" fitWidth="25.0">
+                                        <Image url="@../../../../images/intect.png" />
+                                    </ImageView>
+                                    <Text fill="WHITE" text="Interactions" />
+                                </HBox>
+                            </graphic>
+                        </JFXButton>
+
+                        <!-- Categorization Button -->
+                        <JFXButton maxWidth="Infinity" onAction="#goToCategorisation" style="-fx-background-color: #7091e6; -fx-text-fill: white; -fx-background-radius: 5;" styleClass="nav-button">
+                            <graphic>
+                                <HBox alignment="CENTER_LEFT" spacing="10">
+                                    <ImageView fitHeight="25.0" fitWidth="25.0">
+                                        <Image url="@../../../../images/iy.png" />
+                                    </ImageView>
+                                    <Text fill="WHITE" text="Categorization" />
+                                </HBox>
+                            </graphic>
+                        </JFXButton>
+
+                        <!-- Offers Button -->
+                        <JFXButton maxWidth="Infinity" onAction="#goToOffers" style="-fx-background-color: #7091e6; -fx-text-fill: white; -fx-background-radius: 5;" styleClass="nav-button">
+                            <graphic>
+                                <HBox alignment="CENTER_LEFT" spacing="10">
+                                    <ImageView fitHeight="25.0" fitWidth="25.0">
+                                        <Image url="@../../../../images/rr.png" />
+                                    </ImageView>
+                                    <Text fill="WHITE" text="Offers" />
+                                </HBox>
+                            </graphic>
+                        </JFXButton>
+                    </VBox>
+
+                    <!-- Logout Button -->
+                    <JFXButton maxWidth="Infinity" onAction="#logout" style="-fx-background-color: #7091e6; -fx-text-fill: white; -fx-background-radius: 5;" styleClass="nav-button">
+                        <graphic>
+                            <HBox alignment="CENTER_LEFT" spacing="10">
+                                <ImageView fitHeight="25.0" fitWidth="25.0">
+                                    <Image url="@../../../../images/logout.png" />
+                                </ImageView>
+                                <Text fill="WHITE" text="Logout" />
+                            </HBox>
+                        </graphic>
+                    </JFXButton>
+                </VBox>
+
+                <!-- Main Content Area -->
+                <VBox spacing="20" HBox.hgrow="ALWAYS">
+                    <!-- Header Section -->
+                    <HBox alignment="CENTER_LEFT" spacing="20">
+                        <Text fill="#3d52a0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+                            <font>
+                                <Font name="System Bold" size="29.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Text>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <JFXButton onAction="#goToAddAgents" style="-fx-background-color: #3d52a0;" text="Add Agents" textFill="#f9fafb" />
+                        <JFXButton onAction="#goToManageAgent" style="-fx-background-color: #3d52a0;" text="Agent Management" textFill="#f9fafb" />
+                    </HBox>
+
+                    <!-- Statistics Cards -->
+                    <GridPane hgap="20" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="33.33" />
+                            <ColumnConstraints percentWidth="33.33" />
+                            <ColumnConstraints percentWidth="33.33" />
+                        </columnConstraints>
+
+                        <Button maxWidth="Infinity" prefHeight="92.0" style="-fx-background-color: linear-gradient(to bottom right, #adbbda, #e1e5ec); -fx-background-radius: 10;" styleClass="stat-card" text="Total Agents" textFill="#3d52a0" GridPane.columnIndex="0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+
+                        <Button maxWidth="Infinity" prefHeight="92.0" style="-fx-background-color: linear-gradient(to bottom right, #adbbda, #dfe5ec); -fx-background-radius: 10;" styleClass="stat-card" text="Active Agents" textFill="#eaebec" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+
+                        <Button maxWidth="Infinity" prefHeight="92.0" style="-fx-background-color: linear-gradient(to bottom right, #adbbda, #e4e4ec); -fx-background-radius: 10;" styleClass="stat-card" text="Agents" textFill="#3d52a0" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <rowConstraints>
+                            <RowConstraints />
+                        </rowConstraints>
+                    </GridPane>
+
+                    <!-- Recent Properties Section -->
+
+
+                    <!-- Bottom Cards Section -->
+                    <HBox spacing="20">
+                        <!-- Agent Card -->
+                        <VBox style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10;" styleClass="info-card" HBox.hgrow="ALWAYS">
+                            <HBox spacing="10">
+                                <ImageView fitHeight="35.0" fitWidth="35.0">
+                                    <Image url="@../../../../images/4439992.png" />
+                                </ImageView>
+                                <VBox spacing="5">
+                                    <Text fill="#3d52a0" text="Salah Nofal">
+                                        <font>
+                                            <Font name="System Bold" size="15.0" />
+                                        </font>
+                                    </Text>
+                                    <Text fill="#3d52a0" text="salahnofal@gmail.com" />
+                                    <Text fill="#3d52a0" text="+9705934562424" />
+                                </VBox>
+                            </HBox>
+                        </VBox>
+
+                        <!-- Listing Expire Card -->
+                        <VBox style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 10;" styleClass="info-card" HBox.hgrow="ALWAYS">
+                            <HBox spacing="10">
+                                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                    <Text fill="#3d52a0" text="Listing Expire" />
+                                    <Text fill="#3d52a0" text="Property: Villa Rose" />
+                                    <Text fill="#3d52a0" text="Expired On: December 7, 2024" />
+                                </VBox>
+                                <ImageView fitHeight="25.0" fitWidth="25.0">
+                                    <Image url="@../../../../images/natfi.png" />
+                                </ImageView>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                    <!-- Footer Section -->
+                    <VBox spacing="10" style="-fx-background-color: linear-gradient(to bottom, #3d52a0, #7091e6); -fx-background-radius: 15; -fx-padding: 20;">
+                        <HBox alignment="CENTER" spacing="50">
+                            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../../../images/logo.png" />
+                                </image>
+                            </ImageView>
+                            <!-- Company Info -->
+                            <VBox alignment="CENTER" spacing="5">
+                                <Text fill="white" style="-fx-font-size: 18;" text="RealEstate Pro">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="#e1e1e1" text="Your Trusted Real Estate Partner" />
+                            </VBox>
+
+                            <!-- Quick Links -->
+                            <VBox alignment="CENTER" spacing="5">
+                                <Text fill="white" style="-fx-font-size: 16;" text="Quick Links">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Text>
+                                <HBox spacing="20">
+                                    <JFXButton style="-fx-text-fill: #e1e1e1;" text="About Us" />
+                                    <JFXButton style="-fx-text-fill: #e1e1e1;" text="Contact" />
+                                    <JFXButton style="-fx-text-fill: #e1e1e1;" text="Privacy Policy" />
+                                </HBox>
+                            </VBox>
+
+                            <!-- Social Media -->
+                            <VBox alignment="CENTER" spacing="5">
+                                <Text fill="white" style="-fx-font-size: 16;" text="Follow Us">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Text>
+                                <HBox spacing="10">
+                                    <JFXButton style="-fx-background-color: #979191; -fx-background-radius: 50; -fx-min-width: 40; -fx-min-height: 40;" />
+                                    <JFXButton style="-fx-background-color: #979595; -fx-background-radius: 50; -fx-min-width: 40; -fx-min-height: 40;" />
+                                    <JFXButton style="-fx-background-color: rgba(199,204,209,0.79); -fx-background-radius: 50; -fx-min-width: 40; -fx-min-height: 40;" />
+                                </HBox>
+                            </VBox>
+                        </HBox>
+
+                        <Text fill="#e1e1e1" text="© 2024 RealEstate Pro. All rights reserved." textAlignment="CENTER" />
+                    </VBox>
+                </VBox>
+            </HBox>
+        </AnchorPane>
+    </ScrollPane>
+
+    <stylesheets>
+        <URL value="@dashboard.css" />
+    </stylesheets>
+</StackPane>

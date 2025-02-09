@@ -1,0 +1,105 @@
+/* Modern, vibrant color palette with professional real estate theme */
+.add-property-container {
+    -fx-background-color:  #fff; /* Light blue for a refreshing background */
+    -fx-font-family: 'Inter';
+}
+
+.header-label {
+    -fx-font-size: 28px; /* Slightly larger for emphasis */
+
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+    -fx-border-color: #5dade2; /* Optional underline effect */
+    -fx-border-width: 0 0 2px 0;
+}
+
+.label {
+    -fx-text-fill: #4051A6; /* Darker text for readability */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px; /* Slightly larger label text */
+}
+
+.text-field, .text-area, .combo-box {
+    -fx-background-color: #ffffff; /* Clean white background */
+    -fx-border-color: #5dade2; /* Vibrant blue for borders */
+    -fx-border-radius: 12px; /* Increased radius for more rounded corners */
+    -fx-background-radius: 12px; /* Increased radius for more rounded corners */
+    -fx-padding: 10px;
+    -fx-font-size: 14px; /* Improve text visibility */
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: #2874a6; /* Darker blue for focus */
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, #2874a6, 5, 0.5, 0, 0); /* Subtle shadow effect */
+}
+
+.primary-button {
+    -fx-background-color:  #7191E6; /* Changed to deep blue for a professional tone */
+    -fx-text-fill:#f9fafb; /* Keep text color white */
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px; /* Increased radius for more rounded corners */
+    -fx-padding: 12px 25px;
+    -fx-font-size: 14px;
+
+}
+
+.primary-button:hover {
+    -fx-background-color:  #ADBBDA; /* Slightly lighter blue for hover */
+    //-fx-border-color: #3498db; /* Vibrant hover border */
+}
+
+.secondary-button {
+    -fx-background-color: #dae4f5; /* Light blue for a calm, secondary feel */
+    -fx-text-fill: #154360;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px; /* Increased radius for more rounded corners */
+    -fx-padding: 12px 25px;
+    -fx-font-size: 14px;
+}
+.back-button {
+    -fx-background-color: #7191E6; /* Light blue for a calm, secondary feel */
+        -fx-text-fill: #154360;
+        -fx-font-weight: bold;
+        -fx-background-radius: 12px; /* Increased radius for more rounded corners */
+        -fx-padding: 12px 12px;
+        -fx-font-size: 14px;
+
+}
+.back-button-container {
+    -fx-padding: 0 0 10 0; /* Add some padding at the bottom */
+}
+.back-button:hover {
+     -fx-background-color: #aed6f1; /* Brighter hover state */
+}
+.secondary-button:hover {
+    -fx-background-color: #aed6f1; /* Brighter hover state */
+}
+
+.upload-button {
+    -fx-background-color: #117a65; /* Strong green for emphasis */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px; /* Increased radius for more rounded corners */
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+}
+
+.upload-button:hover {
+    -fx-background-color: #1abc9c; /* Brighter green for hover */
+}
+
+.photo-count-label {
+    -fx-text-fill: #515a5a; /* Neutral gray for subtle text */
+    -fx-font-size: 12px;
+}
+
+.grid-pane {
+    -fx-hgap: 15px; /* More spacing for better layout */
+    -fx-vgap: 15px;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: white; /* Ensure dropdown clarity */
+    -fx-text-fill: #34495e; /* Neutral gray for dropdown text */
+}

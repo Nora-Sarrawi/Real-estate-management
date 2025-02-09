@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.loborems.controllers.PropertyDetailsController">
+    <VBox spacing="20" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+          style="-fx-background-color: linear-gradient(to bottom right, #ede8f5 0%, #adbbda 50%, #8697c4 100%);">
+
+        <!-- Title Section -->
+        <Text fx:id="titleLabel"
+              style="-fx-font-family: 'Helvetica'; -fx-font-size: 32; -fx-font-weight: bold; -fx-fill: #3d52a0;
+                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0, 0, 1);">
+            <VBox.margin>
+                <Insets top="30" right="40" bottom="20" left="40"/>
+            </VBox.margin>
+        </Text>
+
+        <HBox spacing="40" alignment="CENTER" VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets top="20" right="40" bottom="30" left="40"/>
+            </padding>
+
+            <!-- Left Panel - Images -->
+            <VBox spacing="20" alignment="CENTER" HBox.hgrow="ALWAYS"
+                  style="-fx-background-color: linear-gradient(to bottom, #ede8f5 0%, #adbbda 100%);
+                        -fx-background-radius: 20;
+                        -fx-padding: 25;
+                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);">
+
+                <StackPane>
+                    <ImageView fx:id="mainImageView" fitWidth="600" fitHeight="400" preserveRatio="true"
+                               style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+                                    -fx-background-radius: 15;"/>
+                </StackPane>
+
+                <HBox spacing="15" alignment="CENTER">
+                    <StackPane style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;">
+                        <ImageView fx:id="thumbImage1" fitWidth="120" fitHeight="90" preserveRatio="true"
+                                   style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 2);"/>
+                    </StackPane>
+                    <StackPane style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;">
+                        <ImageView fx:id="thumbImage2" fitWidth="120" fitHeight="90" preserveRatio="true"
+                                   style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 2);"/>
+                    </StackPane>
+                    <StackPane style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;">
+                        <ImageView fx:id="thumbImage3" fitWidth="120" fitHeight="90" preserveRatio="true"
+                                   style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 2);"/>
+                    </StackPane>
+                    <StackPane style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 5;">
+                        <ImageView fx:id="thumbImage4" fitWidth="120" fitHeight="90" preserveRatio="true"
+                                   style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 2);"/>
+                    </StackPane>
+                </HBox>
+            </VBox>
+
+            <!-- Right Panel - Details -->
+            <VBox spacing="25" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS"
+                  style="-fx-background-color: linear-gradient(to bottom, #ede8f5 0%, #adbbda 100%);
+                        -fx-background-radius: 20;
+                        -fx-padding: 35;
+                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);">
+
+                <GridPane hgap="20" vgap="15" GridPane.hgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="30"/>
+                        <ColumnConstraints percentWidth="70"/>
+                    </columnConstraints>
+
+                    <!-- Basic Info -->
+                    <Label text="Location:" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="locationLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <Label text="Size:" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="sizeLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <Label text="Property Type:" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="typeLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <Label text="Price:" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="priceLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <Label text="Status:" GridPane.rowIndex="4" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="statusLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <!-- Residential Properties -->
+                    <Label fx:id="bedroomsTitleLabel" text="Bedrooms:" GridPane.rowIndex="5" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="bedroomsLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <Label fx:id="gardenTitleLabel" text="Garden:" GridPane.rowIndex="6" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="gardenLabel" GridPane.rowIndex="6" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <!-- Commercial Properties -->
+                    <Label fx:id="floorsTitleLabel" text="Number of Floors:" GridPane.rowIndex="7" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="floorsLabel" GridPane.rowIndex="7" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+
+                    <Label fx:id="parkingTitleLabel" text="Parking Spaces:" GridPane.rowIndex="8" GridPane.columnIndex="0"
+                           style="-fx-font-weight: bold; -fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                    <Label fx:id="parkingLabel" GridPane.rowIndex="8" GridPane.columnIndex="1"
+                           style="-fx-text-fill: #3d52a0; -fx-font-size: 15;"/>
+                </GridPane>
+
+                <VBox spacing="15">
+                    <Text text="Property Features:"
+                          style="-fx-font-family: 'Helvetica'; -fx-font-size: 20; -fx-font-weight: bold; -fx-fill: #3d52a0;"/>
+                    <Label fx:id="featuresLabel" style="-fx-text-fill: #7091e6; -fx-font-size: 15;"/>
+                </VBox>
+
+                <HBox spacing="15" alignment="BOTTOM_LEFT">
+                    <Button fx:id="backButton" text="Back" onAction="#onBackButtonClicked"
+                            style="-fx-background-color: linear-gradient(to right, #7091e6, #3d52a0);
+                                  -fx-text-fill: white;
+                                  -fx-font-size: 14;
+                                  -fx-padding: 10 25;
+                                  -fx-background-radius: 8;"/>
+                    <Button fx:id="editButton" text="Edit" onAction="#onEditButtonClicked"
+                            style="-fx-background-color: linear-gradient(to right, #7091e6, #3d52a0);
+                                  -fx-text-fill: white;
+                                  -fx-font-size: 14;
+                                  -fx-padding: 10 25;
+                                  -fx-background-radius: 8;"/>
+                    <Button fx:id="deleteButton" text="Delete" onAction="#oneDleteButtonClicked"
+                            style="-fx-background-color: linear-gradient(to right, #7091e6, #3d52a0);
+                                  -fx-text-fill: white;
+                                  -fx-font-size: 14;
+                                  -fx-padding: 10 25;
+                                  -fx-background-radius: 8;"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>

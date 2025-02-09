@@ -1,0 +1,97 @@
+/* Main layout styling */
+.main-layout {
+    -fx-background-color: #F4F6F9; /* Match the sidebar background */
+}
+
+/* Sidebar styles */
+.sidebar {
+    -fx-background-color: #F4F6F9;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+/* General input styles */
+.search-field, .price-field, .location-field, .combo-box {
+    -fx-background-color: #F1F3F5;
+    -fx-background-radius: 15px;
+    -fx-padding: 0 10px;
+    -fx-font-size: 14px;
+}
+
+.price-field {
+    -fx-pref-width: 100px;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #7191E6;
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand; /* Add cursor pointer for better UX */
+}
+
+.button:hover {
+    -fx-background-color: #5A74D9;
+}
+
+/* Top Navigation styles */
+.top-nav {
+    -fx-padding: 20;
+}
+
+/* Navigation buttons */
+.nav-buttons .button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Property listing area */
+.property-list {
+    -fx-padding: 20;
+}
+
+/* ScrollPane styles */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #FFF;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 14;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #8697C3;
+    -fx-background-radius: 7;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #EDE8F5;
+    -fx-border-color: transparent;
+    -fx-background-radius: 7;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Property container */
+.property-container {
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+
+/* Button hover effects */
+#addPropertyButton:hover, #backButton:hover {
+    -fx-background-color: #7486B3;
+    -fx-cursor: hand;
+}

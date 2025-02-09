@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="main-layout" stylesheets="@property-listing.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loborems.controllers.PropertyListingController">
+
+   <!-- Sidebar (Left) -->
+   <left>
+      <VBox fx:id="sidebar" prefWidth="250.0" styleClass="sidebar" VBox.vgrow="ALWAYS">
+         <ComboBox fx:id="propertyTypeComboBox" promptText="Select Type" styleClass="combo-box" VBox.vgrow="NEVER">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Residential" />
+                  <String fx:value="Commercial" />
+               </FXCollections>
+            </items>
+         </ComboBox>
+         <CheckBox fx:id="hasGardenCheckBox" styleClass="checkbox" text="Has Garden" VBox.vgrow="NEVER" />
+         <TextField fx:id="minPriceField" promptText="Min Price" styleClass="price-field" VBox.vgrow="NEVER" />
+         <TextField fx:id="maxPriceField" promptText="Max Price" styleClass="price-field" VBox.vgrow="NEVER" />
+         <TextField fx:id="locationField" promptText="Location" styleClass="location-field" VBox.vgrow="NEVER" />
+         <Button fx:id="applyFiltersButton" mnemonicParsing="false" onAction="#handleFilterApply" styleClass="button" text="Apply Filters" VBox.vgrow="NEVER" />
+      </VBox>
+   </left>
+
+   <!-- Main Content Area (Center) -->
+   <center>
+
+      <!-- Scrollable Content Area (Main Property List) -->
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+         <content>
+            <FlowPane fx:id="propertyListContainer" alignment="CENTER" hgap="20" styleClass="property-list" vgap="20" />
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="523.0" spacing="20.0" styleClass="nav-buttons" BorderPane.alignment="CENTER">
+         <!-- Left section: Sidebar Toggle Button -->
+         <Region HBox.hgrow="ALWAYS" />
+         <Button fx:id="toggleSidebarButton" mnemonicParsing="false" onAction="#handleToggleSidebar" styleClass="button" text="☰ Sidebar" />
+
+         <!-- Middle section: Search Bar -->
+         <Region HBox.hgrow="ALWAYS" />
+         <TextField fx:id="searchBar" promptText="Search properties..." styleClass="search-field" />
+         <Button fx:id="searchButton" mnemonicParsing="false" onAction="#handleSearchClick" styleClass="button" text="🔍 Search" />
+
+         <!-- Right section: Other buttons -->
+         <Region HBox.hgrow="ALWAYS" />
+         <Button fx:id="addPropertyButton" mnemonicParsing="false" onAction="#handleButtonClick" styleClass="button" text="➕ Add Property" />
+         <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBackClick" styleClass="button" text="← Back" />
+      </HBox>
+   </top>
+
+
+</BorderPane>

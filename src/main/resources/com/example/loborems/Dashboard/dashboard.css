@@ -1,0 +1,15 @@
+.nav-button:hover {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-transition: background-color 0.3s;
+}
+
+.stat-card:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-transition: scale 0.3s;
+}
+
+.property-card:hover {
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-transition: background-color 0.3s;
+}

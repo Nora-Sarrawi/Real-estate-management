@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* General background gradient for BorderPane */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #ede8f5, #adbbda, #8697c4);
+}
+
+/* Left panel background gradient */
+.left-panel {
+    -fx-padding: 20;
+    -fx-background-color: linear-gradient(to bottom, #adbbda, #8697c4);
+}
+
+/* Styling for labels */
+.label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7091e6;
+}
+
+/* ComboBox, DatePicker, TextArea styling */
+.combo-box, .date-picker, .text-area {
+    -fx-font-size: 14px;
+    -fx-background-color: #ede8f5;
+    -fx-border-color: #7091e6;
+    -fx-text-fill: #3d52a0;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #7091e6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* TableView and TableColumn styling */
+.table-view {
+    -fx-background-color: #ede8f5;
+    -fx-border-color: #7091e6;
+    -fx-padding: 10;
+}
+
+.table-column {
+    -fx-background-color: #adbbda;
+    -fx-text-fill: #3d52a0;
+}
+
+/* ImageView settings */
+.image-view {
+    -fx-fit-height: 150.0;
+    -fx-fit-width: 200.0;
+    -fx-preserve-ratio: true;
+}

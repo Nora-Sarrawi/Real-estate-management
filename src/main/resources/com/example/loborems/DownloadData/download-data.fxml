@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loborems.controllers.DownloadDataController" stylesheets="@download-data.css" style="-fx-background-color: linear-gradient(to bottom, #f5f7fa, #c3cfe2); -fx-padding: 20; -fx-border-color: #3d52a0; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #eceff4; -fx-padding: 10; -fx-border-color: #3d52a0; -fx-border-radius: 5;">
+        <Label text="Client ID or Name:" styleClass="label" style="-fx-font-weight: bold; -fx-text-fill: #333; -fx-font-size: 14px;" />
+        <TextField fx:id="searchTextField" promptText="Enter Client ID or Name" styleClass="text-field" HBox.hgrow="ALWAYS" style="-fx-background-color: #fff; -fx-border-color: #3d52a0; -fx-border-radius: 5; -fx-padding: 5;" />
+        <Button text="Search" onAction="#searchClient" styleClass="button" style="-fx-background-color: #3d52a0; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 5 10;" />
+    </HBox>
+
+    <TableView fx:id="clientInfoTable" styleClass="table-view" prefHeight="400" prefWidth="800" style="-fx-background-color: #fff; -fx-border-color: #3d52a0; -fx-border-radius: 5; -fx-table-cell-border-color: #c3cfe2;">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" styleClass="table-column" style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+            <TableColumn fx:id="nameColumn" text="Name" styleClass="table-column" style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+            <TableColumn fx:id="emailColumn" text="Email" styleClass="table-column" style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+            <TableColumn fx:id="phoneColumn" text="Phone" styleClass="table-column" style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+            <TableColumn fx:id="propertyColumn" text="Property" styleClass="table-column" style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+            <TableColumn fx:id="roleColumn" text="Role" styleClass="table-column" style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Pagination fx:id="pagination" styleClass="pagination" />
+    </HBox>
+
+    <Button text="Download Data" onAction="#downloadData" styleClass="button" disable="true" fx:id="downloadButton" style="-fx-background-color: #3d52a0; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10 20;" />
+    <ProgressIndicator fx:id="downloadProgress" visible="false" styleClass="progress-indicator" style="-fx-progress-color: #3d52a0;" />
+
+    <Button text="Back" onAction="#handleBack" styleClass="button" style="-fx-background-color: #3d52a0; -fx-text-fill: #fff; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10 20;" />
+</VBox>

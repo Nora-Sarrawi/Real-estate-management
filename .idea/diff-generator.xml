@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DiffGenerationConfig">
+    <option name="sourceModelValue" value="Lobo-REMS:hibernate.cfg.xml" />
+    <option name="targetDbValue" value="24ee5a25-8c3e-4866-ab08-169437aea4d0" />
+  </component>
+</project>

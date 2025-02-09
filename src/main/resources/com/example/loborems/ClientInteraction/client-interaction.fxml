@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@client-interaction.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loborems.controllers.ClientInteractionController">
+
+   <left>
+      <VBox prefWidth="250" spacing="15" styleClass="left-panel">
+         <Label styleClass="label" text="Client Interaction" />
+
+         <ComboBox fx:id="clientSelect" promptText="Select Client" styleClass="combo-box" />
+         <ComboBox fx:id="interactionType" promptText="Select Interaction Type" styleClass="combo-box" />
+         <DatePicker fx:id="datePicker" promptText="Select Date" styleClass="date-picker" />
+         <TextArea fx:id="interactionDetails" prefHeight="120" promptText="Interaction Details" styleClass="text-area" />
+
+         <HBox spacing="10">
+            <Button fx:id="cancelButton" styleClass="button" text="Cancel" />
+            <Button fx:id="saveButton" styleClass="button" text="Save" />
+            <Button fx:id="backButton" styleClass="button" text="Back" />
+         </HBox>
+      </VBox>
+   </left>
+
+   <bottom>
+      <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" styleClass="scroll-pane">
+         <content>
+            <TableView fx:id="tableView" styleClass="table-view">
+               <columns>
+                  <TableColumn fx:id="clientIDColumn" text="Client ID" />
+                  <TableColumn fx:id="dateColumn" text="Date" />
+                  <TableColumn fx:id="interactionTypeColumn" prefWidth="163.00001525878906" text="Interaction Type" />
+                  <TableColumn fx:id="statusColumn" prefWidth="100" text="Details" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </bottom>
+
+   <center>
+      <ImageView fx:id="imageView" pickOnBounds="true" styleClass="image-view" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../../images/4439992.png" />
+         </image>
+      </ImageView>
+   </center>
+
+</BorderPane>

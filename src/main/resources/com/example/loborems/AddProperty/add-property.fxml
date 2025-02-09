@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.loborems.controllers.AddPropertyController"
+      spacing="10"
+      alignment="CENTER"
+      styleClass="add-property-container"
+      stylesheets="@add-property.css">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Add New Property" styleClass="header-label"/>
+
+    <!-- Back Button -->
+    <HBox alignment="TOP_LEFT" styleClass="back-button-container">
+        <Button text="← Back" onAction="#handleBack" styleClass="back-button"/>
+    </HBox>
+
+    <GridPane hgap="10" vgap="10">
+        <!-- Property Title -->
+        <Label text="Property Title" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="titleField" promptText="Enter property title"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   GridPane.hgrow="ALWAYS"/>
+
+        <!-- Location -->
+        <Label text="Location" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="locationField" promptText="Enter property location"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"
+                   GridPane.hgrow="ALWAYS"/>
+
+        <!-- Size -->
+        <Label text="Size (sq. ft)" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="sizeField" promptText="Enter property size"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   GridPane.hgrow="ALWAYS"/>
+
+        <!-- Property Type ComboBox -->
+        <Label text="Property Type" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <ComboBox fx:id="propertyTypeComboBox"
+                  promptText="Select property type"
+                  GridPane.columnIndex="1" GridPane.rowIndex="3"
+                  onAction="#handlePropertyTypeChange">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Residential"/>
+                    <String fx:value="Commercial"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- Residential Fields (initially hidden) -->
+        <VBox fx:id="residentialFields" visible="false" managed="false"
+              GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+            <HBox spacing="10">
+                <Label text="Number of Bedrooms"/>
+                <TextField fx:id="bedroomsField" promptText="Enter number of bedrooms"/>
+            </HBox>
+            <CheckBox fx:id="hasGardenCheckBox" text="Has Garden"/>
+        </VBox>
+
+        <!-- Commercial Fields (initially hidden) -->
+        <VBox fx:id="commercialFields" visible="false" managed="false"
+              GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+            <HBox spacing="10">
+                <Label text="Number of Floors"/>
+                <TextField fx:id="floorsField" promptText="Enter number of floors"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Parking Spaces"/>
+                <TextField fx:id="parkingField" promptText="Enter number of parking spaces"/>
+            </HBox>
+        </VBox>
+
+        <!-- Price -->
+        <Label text="Price" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="priceField" promptText="Enter property price"
+                   GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <!-- Property Features -->
+        <Label text="Property Features" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <TextArea fx:id="featuresArea" promptText="Describe property features"
+                  GridPane.columnIndex="1" GridPane.rowIndex="6"
+                  GridPane.hgrow="ALWAYS"
+                  wrapText="true"/>
+
+        <!-- Status -->
+        <Label text="Status" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+        <ComboBox fx:id="statusComboBox"
+                  promptText="Select property status"
+                  GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Available"/>
+                    <String fx:value="Sold"/>
+                    <String fx:value="Rented"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- Property Photos -->
+        <Label text="Property Photos" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <Button text="Upload Photos" fx:id="uploadPhotosButton"
+                    onAction="#handlePhotoUpload"/>
+            <Label fx:id="photoCountLabel" text="No photos selected"/>
+        </HBox>
+    </GridPane>
+
+    <!-- Action Buttons -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Save Property" onAction="#handleSaveProperty"
+                styleClass="primary-button"/>
+        <Button text="Cancel" onAction="#handleCancel"
+                styleClass="secondary-button"/>
+    </HBox>
+</VBox>

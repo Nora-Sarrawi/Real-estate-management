@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.loborems.controllers.ClientListController"
+            style="-fx-background-color: linear-gradient(to bottom right, #ede8f5, #adbbda, #8697c4);">
+    <left>
+        <VBox spacing="15" alignment="CENTER" minWidth="300.0" maxWidth="400.0">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+            <style>-fx-background-color: linear-gradient(to bottom, #ede8f5, #adbbda); -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);</style>
+
+            <Text text="Add New Client" style="-fx-font-family: 'Helvetica'; -fx-font-size: 24px; -fx-fill: #3d52a0; -fx-font-weight: bold;"/>
+
+            <TextField fx:id="nameField" promptText="Enter Name" style="-fx-pref-width: 100%; -fx-min-height: 35; -fx-background-radius: 5; -fx-font-size: 14px; -fx-prompt-text-fill: #7091e6;"/>
+            <TextField fx:id="emailField" promptText="Enter Email" style="-fx-pref-width: 100%; -fx-min-height: 35; -fx-background-radius: 5; -fx-font-size: 14px; -fx-prompt-text-fill: #7091e6;"/>
+            <TextField fx:id="phoneField" promptText="Enter Phone" style="-fx-pref-width: 100%; -fx-min-height: 35; -fx-background-radius: 5; -fx-font-size: 14px; -fx-prompt-text-fill: #7091e6;"/>
+            <TextField fx:id="propertyField" promptText="Enter Property" style="-fx-pref-width: 100%; -fx-min-height: 35; -fx-background-radius: 5; -fx-font-size: 14px; -fx-prompt-text-fill: #7091e6;"/>
+            <TextField fx:id="roleField" promptText="Enter Role" style="-fx-pref-width: 100%; -fx-min-height: 35; -fx-background-radius: 5; -fx-font-size: 14px; -fx-prompt-text-fill: #7091e6;"/>
+
+            <Button text="Add Client" fx:id="addClientButton" onAction="#onAddClientButtonClicked"
+                    style="-fx-background-color: linear-gradient(to right, #7091e6, #3d52a0); -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 5; -fx-min-width: 150; -fx-cursor: hand;"/>
+
+            <Button fx:id="backButton" text="Back" onAction="#onBackButtonClicked"
+                    style="-fx-background-color: #3d52a0; -fx-text-fill: white; -fx-font-size: 12px; -fx-padding: 8; -fx-background-radius: 5; -fx-min-width: 80; -fx-cursor: hand;"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="15">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+            <TextField fx:id="searchField" promptText="Search by name"
+                       style="-fx-pref-width: 300; -fx-min-height: 35; -fx-background-radius: 5; -fx-font-size: 14px; -fx-prompt-text-fill: #7091e6;"/>
+
+            <TableView fx:id="clientTable" VBox.vgrow="ALWAYS" style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 5;">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" minWidth="50" style="-fx-alignment: CENTER;">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="id"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="nameColumn" text="Name" minWidth="120" style="-fx-alignment: CENTER-LEFT;"/>
+                    <TableColumn fx:id="emailColumn" text="Email" minWidth="180" style="-fx-alignment: CENTER-LEFT;"/>
+                    <TableColumn fx:id="phoneColumn" text="Phone" minWidth="120" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="propertyColumn" text="Property" minWidth="120" style="-fx-alignment: CENTER-LEFT;"/>
+                    <TableColumn fx:id="roleColumn" text="Role" minWidth="100" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="editColumn" text="Edit" minWidth="60" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="removeColumn" text="Delete" minWidth="60" style="-fx-alignment: CENTER;"/>
+                </columns>
+                <placeholder>
+                    <Label text="No clients available." style="-fx-text-fill: #3d52a0; -fx-font-size: 14px;"/>
+                </placeholder>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

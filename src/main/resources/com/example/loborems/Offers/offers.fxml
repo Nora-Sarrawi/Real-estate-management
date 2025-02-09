@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefWidth="800" spacing="10" xmlns:fx="http://javafx.com/fxml/1"
+    xmlns="http://javafx.com/javafx/23.0.1"
+    fx:controller="com.example.loborems.controllers.OffersController"
+    style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ede8f5, #adbbda, #8697c4);">
+
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="backButtonOffers" onAction="#handleBack" mnemonicParsing="false"
+            text="Back"
+            style="-fx-background-color: #3d52a0; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+        <Label text="Offer Management" alignment="CENTER"
+            style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #3d52a0;" />
+    </HBox>
+
+    <VBox spacing="10"
+        style="-fx-padding: 10; -fx-background-color: #f9f9f9; -fx-border-color: #3d52a0; -fx-border-radius: 5; -fx-background-radius: 5;">
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="Client Name:"
+                style="-fx-font-weight: bold; -fx-text-fill: #3d52a0;" />
+            <ComboBox fx:id="clientNameComboBox" promptText="Select client"
+                HBox.hgrow="ALWAYS"
+                style="-fx-text-fill: #3d52a0; -fx-prompt-text-fill: derive(#3d52a0, 70%); -fx-background-color: #ffffff; -fx-border-color: #3d52a0; -fx-border-radius: 5;" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="Property Type:"
+                style="-fx-font-weight: bold; -fx-text-fill: #3d52a0;" />
+            <ComboBox fx:id="propertyTypeCombo" promptText="Select Property Type"
+                style="-fx-background-color: #ffffff; -fx-border-color: #3d52a0; -fx-border-radius: 5;" />
+
+            <Label text="Offer Type:" style="-fx-font-weight: bold; -fx-text-fill: #3d52a0;" />
+            <ComboBox fx:id="offerTypeCombo" promptText="Select Offer Type"
+                style="-fx-background-color: #ffffff; -fx-border-color: #3d52a0; -fx-border-radius: 5;" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="Price:" style="-fx-font-weight: bold; -fx-text-fill: #3d52a0;" />
+            <TextField fx:id="priceField" promptText="Enter offer price"
+                style="-fx-text-fill: #3d52a0; -fx-prompt-text-fill: derive(#3d52a0, 70%); -fx-background-color: #ffffff; -fx-border-color: #3d52a0; -fx-border-radius: 5;" />
+
+            <Button fx:id="addOfferButton" text="Add Offer" onAction="#handleAddOffer"
+                style="-fx-background-color: #3d52a0; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+            <Button fx:id="cancelEditButton" text="Cancel" onAction="#handleCancelEdit"
+                style="-fx-background-color: #888; -fx-text-fill: #ffffff; -fx-font-weight: bold;" visible="false" />
+        </HBox>
+
+        <TableView fx:id="offersTable"
+            style="-fx-background-color: #ffffff; -fx-border-color: #3d52a0; -fx-border-radius: 5;">
+            <columns>
+                <TableColumn fx:id="clientNameColumn" text="Client Name"
+                    style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+                <TableColumn fx:id="propertyTypeColumn" text="Property Type"
+                    style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+                <TableColumn fx:id="offerTypeColumn" text="Offer Type"
+                    style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+                <TableColumn fx:id="priceColumn" text="Price"
+                    style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+                <TableColumn fx:id="statusColumn" text="Status"
+                    style="-fx-alignment: CENTER; -fx-text-fill: #3d52a0; -fx-font-weight: bold;" />
+            </columns>
+        </TableView>
+    </VBox>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="downloadDataButton" onAction="#handleDownloadData" mnemonicParsing="false"
+            text="Download Data"
+            style="-fx-background-color: #3d52a0; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+    </HBox>
+</VBox>

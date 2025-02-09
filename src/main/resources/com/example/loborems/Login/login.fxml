@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<StackPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loborems.controllers.LoginController">
+
+    <AnchorPane>
+        <!-- Main Background -->
+        <Rectangle AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.933" green="0.910" blue="0.961" />  <!-- #ede8f5 -->
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.678" green="0.733" blue="0.854" />  <!-- #adbbda -->
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+            <effect>
+                <GaussianBlur radius="0" />
+            </effect>
+        </Rectangle>
+
+        <!-- Content Grid -->
+        <GridPane hgap="30" style="-fx-padding: 30;" vgap="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="45" />
+                <ColumnConstraints percentWidth="55" />
+            </columnConstraints>
+
+            <!-- Left Panel -->
+            <VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #8697c4; -fx-background-radius: 20;" GridPane.columnIndex="0">
+                <padding>
+                    <Insets topRightBottomLeft="20" />
+                </padding>
+
+                <!-- Logo -->
+                <StackPane>
+                    <ImageView fitWidth="150" preserveRatio="true">
+                        <Image url="@../../../../images/logo.png" />
+                    </ImageView>
+                </StackPane>
+
+                <!-- Welcome Text -->
+                <VBox spacing="10" style="-fx-alignment: center; -fx-padding: 20 0;">
+                    <Text style="-fx-font-size: 24; -fx-fill: white; -fx-font-weight: bold;" text="Welcome to" />
+                    <Text style="-fx-font-size: 32; -fx-fill: #3d52a0; -fx-font-weight: bold;" text="LoboREMS" />
+                </VBox>
+
+                <!-- Feature Image -->
+                <ImageView fitHeight="300" preserveRatio="true">
+                    <Image url="@../../../../images/Estate.png" />
+                </ImageView>
+            </VBox>
+
+            <!-- Right Panel - Login Form -->
+            <StackPane style="-fx-background-color: white; -fx-background-radius: 20;                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 0);" GridPane.columnIndex="1">
+                <padding>
+                    <Insets topRightBottomLeft="30" />
+                </padding>
+
+                <VBox spacing="25" style="-fx-max-width: 400; -fx-alignment: center;">
+                    <Text style="-fx-font-size: 24; -fx-fill: #3d52a0; -fx-font-weight: bold;" text="Find your place of dream" />
+                    <Text style="-fx-font-size: 28; -fx-font-weight: bold; -fx-fill: #3d52a0;" text="Login" />
+
+                    <!-- Form Fields -->
+                    <VBox spacing="20">
+                        <JFXTextField fx:id="emailField" labelFloat="true" promptText="Email Address" style="-fx-font-size: 14; -jfx-focus-color: #7091e6; -jfx-unfocus-color: #adbbda;" />
+
+                        <JFXPasswordField fx:id="passwordField" labelFloat="true" promptText="Password" style="-fx-font-size: 14; -jfx-focus-color: #7091e6; -jfx-unfocus-color: #adbbda;" />
+
+                        <HBox spacing="10" style="-fx-padding: 10 0;">
+                            <JFXCheckBox fx:id="rememberMe" style="-jfx-checked-color: #7091e6;" text="Remember me" />
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Hyperlink fx:id="forgotPasswordLink" onAction="#handleForgotPassword" style="-fx-text-fill: #7091e6;" text="Forgot Password?" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Login Button -->
+                    <JFXButton fx:id="loginButton" buttonType="RAISED" style="-fx-background-color: #7091e6; -fx-text-fill: white;                                      -fx-font-weight: bold; -fx-padding: 12 30; -fx-font-size: 14;" text="LOGIN" />
+
+                    <!-- Social Login -->
+                    <VBox spacing="15" style="-fx-alignment: center; -fx-padding: 20 0;">
+                        <Text style="-fx-fill: #adbbda; -fx-font-size: 14;" text="Or login with" />
+                        <HBox alignment="CENTER" spacing="20">
+                            <JFXButton style="-fx-background-color: #3d52a0; -fx-text-fill: white;                                             -fx-padding: 8 20; -fx-font-size: 13;" text="Google" />
+                            <JFXButton style="-fx-background-color: #3d52a0; -fx-text-fill: white;                                             -fx-padding: 8 20; -fx-font-size: 13;" text="Facebook" />
+                        </HBox>
+                    </VBox>
+                </VBox>
+            </StackPane>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </AnchorPane>
+</StackPane>

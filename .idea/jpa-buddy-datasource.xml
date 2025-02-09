@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-source-infos>
+      <data-source-info id="24ee5a25-8c3e-4866-ab08-169437aea4d0" persistence-unit-name="Lobo-REMS:hibernate.cfg.xml" />
+    </data-source-infos>
+  </component>
+</project>
